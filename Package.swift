@@ -28,7 +28,7 @@ var settings: [SwiftSetting]? = [
   // This removes:
   // - UUID <-> UniqueID conversion APIs.
   // - UUID timestamps as 'Date' (but Date will soon join the standard library).
-  //.define("NO_FOUNDATION_COMPAT"),
+  // .define("NO_FOUNDATION_COMPAT"),
 
 ]
 
@@ -36,7 +36,7 @@ if settings?.isEmpty == true { settings = nil }
 
 let package = Package(
     name: "UniqueID",
-    platforms: [.macOS(.v10_12) /* for os_unfair_lock */],
+    platforms: [.macOS(.v10_12), .iOS(.v10_0) /* for os_unfair_lock */],
     products: [
       .library(
         name: "UniqueID",
