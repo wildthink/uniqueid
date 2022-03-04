@@ -67,7 +67,7 @@ let package = Package(
   name: "MyPackage",
   dependencies: [
     .package(
-      url: "https://github.com/karwa/uniqueid",
+      url: "https://github.com/wildthink/uniqueid",
       .upToNextMajor(from: "1.0.0")
     )
   ],
