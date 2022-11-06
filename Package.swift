@@ -35,12 +35,7 @@ if settings?.isEmpty == true { settings = nil }
 
 let package = Package(
     name: "UniqueID",
-    platforms: [
-        .tvOS(.v11),
-        .watchOS(.v4),
-        .macOS(.v10_12), /* for os_unfair_lock */
-        .iOS(.v13)
-    ],
+    platforms: [.macOS(.v10_12), .iOS(.v10), .tvOS(.v10), .watchOS(.v3) /* for os_unfair_lock */],
     products: [
       .library(
         name: "UniqueID",
